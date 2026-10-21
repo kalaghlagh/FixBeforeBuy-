@@ -1,0 +1,113 @@
+<resources>
+    <string name="app_name">Fix Before Buy</string>
+    <string name="tagline">Réparez avant de remplacer. Économisez de l\'argent, réduisez les déchets électroniques.</string>
+
+    <!-- Navigation -->
+    <string name="nav_home">Accueil</string>
+    <string name="nav_diagnose">Diagnostiquer</string>
+    <string name="nav_history">Historique</string>
+    <string name="nav_settings">Paramètres</string>
+
+    <!-- Categories -->
+    <string name="category_appliances">Électroménager</string>
+    <string name="category_computers">Ordinateurs &amp; PC portables</string>
+    <string name="category_accessories">Périphériques &amp; Accessoires</string>
+    <string name="category_everyday">Objets du quotidien</string>
+
+    <!-- Home -->
+    <string name="hero_title">Diagnostic Intelligent</string>
+    <string name="hero_subtitle">Identifiez la panne, évaluez la sécurité de réparation et comparez les coûts.</string>
+    <string name="start_diagnosis">Commencer le diagnostic</string>
+    <string name="recent_sessions">Sessions récentes</string>
+    <string name="no_recent_sessions">Aucun diagnostic récent. Lancez votre première vérification !</string>
+    <string name="quick_cost_calculator">Calculateur de coûts</string>
+    <string name="safety_notice_banner">Sécurité : Débranchez toujours l\'alimentation avant d\'inspecter. Ne tentez jamais de réparer des circuits sous tension ou des batteries gonflées.</string>
+    <string name="problem_description_label">Décrivez le problème</string>
+    <string name="problem_description_placeholder">ex. Le ventilateur du PC portable fait un bruit fort et surchauffe...</string>
+    <string name="brand_model_label">Marque / Modèle (Optionnel)</string>
+    <string name="brand_model_placeholder">ex. Dell XPS 15</string>
+    <string name="take_photo">Appareil photo</string>
+    <string name="choose_gallery">Galerie</string>
+    <string name="remove_photo">Supprimer la photo</string>
+
+    <!-- Wizard / Diagnosis -->
+    <string name="diagnostic_wizard">Assistant de diagnostic</string>
+    <string name="possible_causes">Causes possibles</string>
+    <string name="safe_inspection">Test d\'inspection sécurisé</string>
+    <string name="repair_guide">Guide de réparation</string>
+    <string name="required_tools">Outils requis</string>
+    <string name="required_parts">Pièces requises</string>
+    <string name="difficulty">Difficulté</string>
+    <string name="estimated_time">Temps estimé</string>
+    <string name="confidence_score">Indice de confiance</string>
+    <string name="confidence_disclaimer">L\'indice est une estimation basée sur les symptômes décrits, non une expertise physique certifiée.</string>
+    <string name="yes">Oui</string>
+    <string name="no">Non</string>
+    <string name="not_sure">Pas sûr</string>
+    <string name="send_answer">Envoyer</string>
+    <string name="type_answer_placeholder">Répondez ou ajoutez des détails…</string>
+    <string name="technician_warning">Technicien qualifié recommandé</string>
+    <string name="technician_explanation">Cette réparation présente des risques ou nécessite un équipement spécialisé hors bricolage sécurisé.</string>
+    <string name="start_over">Recommencer</string>
+    <string name="confirm_start_over">Voulez-vous démarrer un nouveau diagnostic ? La session actuelle sera enregistrée dans l\'historique.</string>
+    <string name="cancel">Annuler</string>
+    <string name="confirm">Confirmer</string>
+    <string name="offline_mode_badge">Mode heuristique local</string>
+    <string name="ai_mode_badge">Diagnostic IA actif</string>
+    <string name="analyzing_symptoms">Analyse des symptômes &amp; règles de sécurité…</string>
+
+    <!-- Cost Calculator -->
+    <string name="cost_calculator_title">Calculateur Réparer vs Remplacer</string>
+    <string name="cost_calc_subtitle">Comparez le coût de réparation à l\'achat d\'un appareil neuf.</string>
+    <string name="parts_cost_label">Coût des pièces détachées (€/$)</string>
+    <string name="labor_cost_label">Coût main d\'œuvre / outils (€/$)</string>
+    <string name="extra_repair_cost_label">Frais annexes de réparation (€/$)</string>
+    <string name="replacement_price_label">Prix d\'un produit neuf (€/$)</string>
+    <string name="extra_purchase_cost_label">Frais d\'installation / accessoires (€/$)</string>
+    <string name="useful_life_repair_label">Durée de vie après réparation (Années)</string>
+    <string name="useful_life_replace_label">Durée de vie d\'un produit neuf (Années)</string>
+    <string name="total_repair_cost">Coût total de réparation</string>
+    <string name="total_replacement_cost">Coût total de remplacement</string>
+    <string name="immediate_savings">Économies potentielles immédiates</string>
+    <string name="repair_recommended">La réparation est financièrement avantageuse !</string>
+    <string name="replace_recommended">Le remplacement est plus économique</string>
+    <string name="annualized_cost_repair">Coût annuel estimé pour réparer : %1$.2f/an</string>
+    <string name="annualized_cost_replace">Coût annuel estimé pour remplacer : %1$.2f/an</string>
+    <string name="cost_disclaimer">Les estimations dépendent de vos données, des pièces et des tarifs locaux.</string>
+    <string name="save_to_session">Enregistrer dans le diagnostic</string>
+
+    <!-- History -->
+    <string name="history_title">Historique des réparations</string>
+    <string name="search_history">Rechercher des sessions…</string>
+    <string name="all_categories">Tous</string>
+    <string name="no_sessions_found">Aucune session correspondante.</string>
+    <string name="resume_session">Reprendre</string>
+    <string name="delete_session">Supprimer</string>
+    <string name="clear_all_history">Tout effacer</string>
+    <string name="confirm_delete_session">Voulez-vous supprimer cette session ?</string>
+    <string name="confirm_clear_all">Voulez-vous effacer tout l\'historique ? Cette action est irréversible.</string>
+
+    <!-- Settings -->
+    <string name="settings_title">Paramètres</string>
+    <string name="general_settings">Général</string>
+    <string name="language_label">Langue</string>
+    <string name="theme_label">Thème</string>
+    <string name="theme_system">Défaut du système</string>
+    <string name="theme_light">Clair</string>
+    <string name="theme_dark">Sombre</string>
+    <string name="ai_configuration">Fournisseur d\'IA de diagnostic</string>
+    <string name="ai_provider_label">Fournisseur</string>
+    <string name="api_key_label">Clé API</string>
+    <string name="api_key_placeholder">Saisir la clé API…</string>
+    <string name="model_id_label">Identifiant du modèle</string>
+    <string name="custom_endpoint_label">Point de terminaison personnalisé (Optionnel)</string>
+    <string name="test_connection">Tester la connexion</string>
+    <string name="testing_connection">Test en cours…</string>
+    <string name="connection_success">Connexion réussie ! Le fournisseur est opérationnel.</string>
+    <string name="connection_failed">Échec de connexion : %1$s</string>
+    <string name="save_settings">Enregistrer les paramètres</string>
+    <string name="clear_key">Effacer la clé</string>
+    <string name="confirm_clear_key">Effacer la clé API du stockage sécurisé ?</string>
+    <string name="security_notice">Sécurité : Les clés sont stockées dans les préférences chiffrées de l\'application.</string>
+    <string name="app_version">Version 1.0.0 (Prêt pour production)</string>
+</resources>

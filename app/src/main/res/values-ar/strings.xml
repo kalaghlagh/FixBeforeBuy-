@@ -1,0 +1,113 @@
+<resources>
+    <string name="app_name">Fix Before Buy</string>
+    <string name="tagline">أصلح قبل أن تشتري. وفّر المال وحافظ على البيئة من النفايات الإلكترونية.</string>
+
+    <!-- Navigation -->
+    <string name="nav_home">الرئيسية</string>
+    <string name="nav_diagnose">التشخيص</string>
+    <string name="nav_history">السجل</string>
+    <string name="nav_settings">الإعدادات</string>
+
+    <!-- Categories -->
+    <string name="category_appliances">الأجهزة المنزلية</string>
+    <string name="category_computers">الحواسيب المحمولة والمكتبية</string>
+    <string name="category_accessories">ملحقات الحاسوب والأجهزة الطرفية</string>
+    <string name="category_everyday">المنتجات اليومية الأخرى</string>
+
+    <!-- Home -->
+    <string name="hero_title">التشخيص الذكي للأجهزة</string>
+    <string name="hero_subtitle">اكتشف سبب العطل، وتأكد من سلامة الإصلاح بنفسك، وقارن التكاليف بدقة.</string>
+    <string name="start_diagnosis">بدء التشخيص</string>
+    <string name="recent_sessions">الجلسات الأخيرة</string>
+    <string name="no_recent_sessions">لا توجد جلسات سابقة. ابدأ أول فحص للأعطال الآن!</string>
+    <string name="quick_cost_calculator">حاسبة التكاليف</string>
+    <string name="safety_notice_banner">السلامة أولاً: افصل دائماً التيار الكهربائي قبل الفحص. لا تحاول أبداً إصلاح الدوائر الكهربائية الحية أو البطاريات المنتفخة.</string>
+    <string name="problem_description_label">وصف المشكلة</string>
+    <string name="problem_description_placeholder">مثال: مروحة الحاسوب المحمول تصدر صوتاً مرتفعاً مع ارتفاع الحرارة...</string>
+    <string name="brand_model_label">العلامة التجارية / الموديل (اختياري)</string>
+    <string name="brand_model_placeholder">مثال: Dell XPS 15</string>
+    <string name="take_photo">الكاميرا</string>
+    <string name="choose_gallery">المعرض</string>
+    <string name="remove_photo">إزالة الصورة</string>
+
+    <!-- Wizard / Diagnosis -->
+    <string name="diagnostic_wizard">مرشد التشخيص التفاعلي</string>
+    <string name="possible_causes">الأسباب المحتملة</string>
+    <string name="safe_inspection">فحص أمان أولي</string>
+    <string name="repair_guide">إرشادات الإصلاح</string>
+    <string name="required_tools">الأدوات المطلوبة</string>
+    <string name="required_parts">القطع المطلوبة</string>
+    <string name="difficulty">مستوى الصعوبة</string>
+    <string name="estimated_time">الوقت التقديري</string>
+    <string name="confidence_score">مستوى الثقة</string>
+    <string name="confidence_disclaimer">مستوى الثقة هو تقدير ذكاء اصطناعي بناءً على الأعراض المذكورة وليس فحصاً فنياً معتمداً.</string>
+    <string name="yes">نعم</string>
+    <string name="no">لا</string>
+    <string name="not_sure">لست متأكداً</string>
+    <string name="send_answer">إرسال</string>
+    <string name="type_answer_placeholder">أدخل إجابتك أو تفاصيل إضافية…</string>
+    <string name="technician_warning">يوصى بالاستعانة بفني متخصص</string>
+    <string name="technician_explanation">يتطلب هذا الإصلاح معدات متخصصة أو ينطوي على مخاطر تتجاوز حدود الإصلاح المنزلي الآمن.</string>
+    <string name="start_over">البدء من جديد</string>
+    <string name="confirm_start_over">هل أنت متأكد من بدء تشخيص جديد؟ سيتم حفظ الجلسة الحالية في السجل.</string>
+    <string name="cancel">إلغاء</string>
+    <string name="confirm">تأكيد</string>
+    <string name="offline_mode_badge">وضع التشخيص المحلي</string>
+    <string name="ai_mode_badge">تشخيص الذكاء الاصطناعي مفعّل</string>
+    <string name="analyzing_symptoms">جارٍ تحليل الأعراض وقواعد السلامة…</string>
+
+    <!-- Cost Calculator -->
+    <string name="cost_calculator_title">حاسبة الإصلاح مقابل الشراء</string>
+    <string name="cost_calc_subtitle">قارن التكلفة الإجمالية للإصلاح مع تكلفة شراء منتج بديل جديد.</string>
+    <string name="parts_cost_label">تكلفة قطع الغيار ($)</string>
+    <string name="labor_cost_label">تكلفة المصنعية أو الأدوات ($)</string>
+    <string name="extra_repair_cost_label">مصاريف إصلاح إضافية ($)</string>
+    <string name="replacement_price_label">سعر المنتج الجديد البديل ($)</string>
+    <string name="extra_purchase_cost_label">مصاريف الشحن والتركيب ($)</string>
+    <string name="useful_life_repair_label">العمر الافتراضي بعد الإصلاح (سنوات)</string>
+    <string name="useful_life_replace_label">العمر الافتراضي للمنتج الجديد (سنوات)</string>
+    <string name="total_repair_cost">إجمالي تكلفة الإصلاح</string>
+    <string name="total_replacement_cost">إجمالي تكلفة الشراء الجديد</string>
+    <string name="immediate_savings">التوفير المالي المباشر</string>
+    <string name="repair_recommended">الإصلاح أفضل اقتصادياً وتوفيراً!</string>
+    <string name="replace_recommended">الشراء الجديد أكثر جدوى اقتصادية</string>
+    <string name="annualized_cost_repair">التكلفة السنوية التقديرية للإصلاح: %1$.2f$/سنة</string>
+    <string name="annualized_cost_replace">التكلفة السنوية التقديرية للجديد: %1$.2f$/سنة</string>
+    <string name="cost_disclaimer">التقديرات تعتمد على المدخلات وأسعار السوق المحلي وتوافر القطع.</string>
+    <string name="save_to_session">حفظ إلى التشخيص</string>
+
+    <!-- History -->
+    <string name="history_title">سجل الإصلاحات</string>
+    <string name="search_history">البحث في الجلسات…</string>
+    <string name="all_categories">الكل</string>
+    <string name="no_sessions_found">لا توجد جلسات مطابقة.</string>
+    <string name="resume_session">متابعة</string>
+    <string name="delete_session">حذف</string>
+    <string name="clear_all_history">مسح السجل بالكامل</string>
+    <string name="confirm_delete_session">هل أنت متأكد من حذف هذه الجلسة؟</string>
+    <string name="confirm_clear_all">هل أنت متأكد من مسح جميع السجلات؟ لا يمكن التراجع عن هذا الإجراء.</string>
+
+    <!-- Settings -->
+    <string name="settings_title">الإعدادات</string>
+    <string name="general_settings">عام</string>
+    <string name="language_label">اللغة</string>
+    <string name="theme_label">المظهر</string>
+    <string name="theme_system">تلقائي حسب النظام</string>
+    <string name="theme_light">فاتح</string>
+    <string name="theme_dark">داكن</string>
+    <string name="ai_configuration">مزود الذكاء الاصطناعي</string>
+    <string name="ai_provider_label">المزود</string>
+    <string name="api_key_label">مفتاح API</string>
+    <string name="api_key_placeholder">أدخل مفتاح API…</string>
+    <string name="model_id_label">معرف النموذج</string>
+    <string name="custom_endpoint_label">نقطة نهاية مخصصة (اختياري)</string>
+    <string name="test_connection">اختبار الاتصال</string>
+    <string name="testing_connection">جارٍ الاختبار…</string>
+    <string name="connection_success">نجح الاتصال! المزود يعمل بنجاح.</string>
+    <string name="connection_failed">فشل الاتصال: %1$s</string>
+    <string name="save_settings">حفظ الإعدادات</string>
+    <string name="clear_key">مسح المفتاح</string>
+    <string name="confirm_clear_key">هل تريد مسح مفتاح API المخزن بأمان؟</string>
+    <string name="security_notice">ملاحظة أمنية: يتم تخزين المفاتيح محلياً ومشفرة. في النشر الموسع يُنصح باستخدام وسيط خادم خلفي.</string>
+    <string name="app_version">الإصدار 1.0.0 (جاهز للإنتاج)</string>
+</resources>

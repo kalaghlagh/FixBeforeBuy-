@@ -1,0 +1,93 @@
+name: Build Fix Before Buy Release APK
+
+on:
+  push:
+    branches:
+      - main
+      - master
+    tags:
+      - 'v*'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    name: Build & Package Android APK
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 21
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '21'
+
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v4
+
+      - name: Accept Android SDK licenses
+        run: |
+          yes | "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" --licenses || true
+
+      - name: Ensure gradlew is executable
+        run: chmod +x gradlew
+
+      - name: Setup Signing Keystore for Release
+        run: |
+          if [ ! -f "my-upload-key.jks" ]; then
+            echo "Generating release signing keystore for CI..."
+            keytool -genkey -v -keystore my-upload-key.jks -alias upload -keyalg RSA -keysize 2048 -validity 10000 -storepass android -keypass android -dname "CN=FixBeforeBuy, OU=App, O=FixBeforeBuy, L=SanFrancisco, S=CA, C=US"
+          fi
+          mkdir -p app
+          cp my-upload-key.jks app/my-upload-key.jks
+
+      - name: Run Unit & JVM Tests
+        run: |
+          ./gradlew testDebugUnitTest --continue
+
+      - name: Build Release APK
+        env:
+          KEYSTORE_PATH: ${{ github.workspace }}/app/my-upload-key.jks
+          STORE_PASSWORD: "android"
+          KEY_PASSWORD: "android"
+        run: |
+          ./gradlew assembleRelease --stacktrace
+
+      - name: Verify Release APK exists
+        run: |
+          APK_PATH=$(find app/build/outputs/apk -name "*release*.apk" | head -n 1)
+          if [ -z "$APK_PATH" ] || [ ! -f "$APK_PATH" ]; then
+            echo "ERROR: Release APK not found in app/build/outputs/apk/"
+            exit 1
+          fi
+          FILESIZE=$(stat -c%s "$APK_PATH" 2>/dev/null || stat -f%z "$APK_PATH")
+          if [ "$FILESIZE" -le 0 ]; then
+            echo "ERROR: Release APK is empty (0 bytes)"
+            exit 1
+          fi
+          echo "Found verified APK: $APK_PATH (Size: $FILESIZE bytes)"
+          echo "VERIFIED_APK_PATH=$APK_PATH" >> $GITHUB_ENV
+
+      - name: Upload APK Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: fix-before-buy-release-apk
+          path: ${{ env.VERIFIED_APK_PATH }}
+          retention-days: 30
+
+      - name: Create GitHub Release for Version Tag
+        if: startsWith(github.ref, 'refs/tags/v')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: ${{ env.VERIFIED_APK_PATH }}
+          name: Fix Before Buy Release ${{ github.ref_name }}
+          draft: false
+          prerelease: false
+          generate_release_notes: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
